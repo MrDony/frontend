@@ -12,7 +12,7 @@
 
     </div>
     <div class="tables">
-        <p>Filters</p>
+        <p style="text-align: center;">Filters</p>
         <div class="filters">
             <div class="input-field">
                 <p class="input-field-label">Priority</p>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div *ngFor="let log_type of unpacked_logs_keys">
-            <h1 style="background-color: black; color: white;">{{log_type}}</h1>
+            <h1 style="background-color: black; color: white; margin: 5px 0px; padding: 5px; width: max-content; border-radius: 10px;">{{log_type}}</h1>
             <table >
             
                 <th>Log</th>
