@@ -1,0 +1,48 @@
+<section class="content">
+    <h1>Dashboard</h1>
+    <p>Following is the data of the logs that were recieved.</p>
+    <br>
+    <div class="count-cards">
+        <h2>Log sources:</h2>
+        <div class="log-sources">
+            <p *ngFor="let log_type of unpacked_logs_keys">{{log_type}}</p>
+        </div>
+
+        
+
+    </div>
+    <div class="tables">
+        <p>Filters</p>
+        <div class="filters">
+            <div class="input-field">
+                <p class="input-field-label">Priority</p>
+                <input [(ngModel)]="filter_priority" type="text">
+            </div>
+            <button (click)="changeFilterType()">{{filter_type}}</button>
+            <div class="input-field">
+                <p class="input-field-label">Count</p>
+            <input [(ngModel)]="filter_count" type="number">
+            </div>
+        </div>
+        <div *ngFor="let log_type of unpacked_logs_keys">
+            <h1 style="background-color: black; color: white;">{{log_type}}</h1>
+            <table >
+            
+                <th>Log</th>
+                <th>Priority</th>
+                <th>Count</th>
+                <th>Description</th>
+                <tr *ngFor="let log of unpacked_logs[log_type]">
+                    <ng-container *ngIf="fits_filter(log)">
+                        <td class="log">{{log.log}}</td>
+                        <td class="priority" [ngStyle]="{ 'background-color': calculateBackgroundColor(log.priority) }">{{log.priority}}</td>
+                        <td class="count">{{log.count}}</td>
+                        <td class="description">{{log.description}}</td>
+                    </ng-container> 
+                        
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</section>

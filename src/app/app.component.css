@@ -1,0 +1,36 @@
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(36, 36, 106)
+}
+nav button{
+    padding: 5px;
+    font-size: 20px;
+    background: none;
+    color: white;
+    margin: 20px;
+    width: 10%;
+}
+nav button:hover{
+    background-color: #FFFFFF0F;
+}
+
+
+
+
+footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.connected-status-bar{
+    height: 2px;
+    width: auto;
+    background-color: #14d214;
+}

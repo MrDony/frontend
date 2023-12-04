@@ -1,0 +1,52 @@
+.content{
+    height: 90%;
+    padding: 10px;
+    background-color: var(--primary-color-dark);
+    color: white;
+    overflow: scroll;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    
+    padding: 10px;
+    width: auto;
+}
+
+tr{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.log{
+    width: 25%;
+}
+.priority{
+    width: 15%;
+    text-align: center;
+    font-size: 50px;
+}
+.count{
+    width: 10%;
+    text-align: center;
+    font-size: 30px;
+}
+.description{
+    width: 50%;
+}
+
+
+
+.log-sources{
+    display: flex;
+}
+.log-sources p{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
